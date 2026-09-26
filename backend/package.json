@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec node --env-file=.env --loader ts-node/esm src/index.ts",
+    "dev": "nodemon --exec tsx --env-file=.env src/index.ts",
     "postinstall": "prisma skills sync || exit 0"
   },
   "keywords": [],
@@ -17,7 +17,7 @@
     "@types/pg": "^8.23.1",
     "nodemon": "^3.1.14",
     "prisma": "^6.19.3",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   },
   "dependencies": {
