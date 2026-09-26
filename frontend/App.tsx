@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import { colors } from './src/theme/colors';
 import { EntregaProvider } from './src/context/EntregaContext';
 import DrawerNavigator from './src/navigators/DrawerNavigator';
 import FormularioEntregaScreen from './src/screens/FormularioEntregaScreen';
@@ -22,7 +22,13 @@ export default function App() {
           <Stack.Screen
             name="FormularioEntrega"
             component={FormularioEntregaScreen}
-            options={{ headerShown: true, title: 'Registrar Entrega' }}
+            options={{
+              headerShown: true,
+              title: 'Registrar Entrega',
+              headerStyle: { backgroundColor: colors.primary },
+              headerTintColor: '#fff',
+              headerTitleStyle: { fontWeight: '700' },
+            }}
           />
         </Stack.Navigator>
       </NavigationContainer>
